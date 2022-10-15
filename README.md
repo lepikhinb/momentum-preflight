@@ -40,7 +40,7 @@ Route::post('register', RegisterController::class)
 
 > The frontend package is only for Vue 3 now due to its wide adoption within the Laravel community.
 
-Install the frontend package.
+Install the [frontend package](https://github.com/lepikhinb/momentum-preflight-plugin).
 
 ```bash
 npm i momentum-preflight
@@ -65,29 +65,29 @@ class RegisterController
 ```
 
 ```ts
-import { useForm } from "inertia/inertia-vue3"
-import { useValidate } from "momentum-preflight"
+import { useForm } from "inertia/inertia-vue3";
+import { useValidate } from "momentum-preflight";
 
-const form = useForm({ name: "" })
+const form = useForm({ name: "" });
 
-const validate = useValidate(form, "/register", { debounce: 500 })
+const validate = useValidate(form, "/register", { debounce: 500 });
 
 watch(
   () => form.data(),
   () => validate()
-)
+);
 ```
 
 The package performs validation for all defined rules. However, you can specify exact fields so that all errors don't appear together once you start typing.
 
 ```vue
 <script setup>
-import { useForm } from "inertia/inertia-vue3"
-import { useValidate } from "momentum-preflight"
+import { useForm } from "inertia/inertia-vue3";
+import { useValidate } from "momentum-preflight";
 
-const form = useForm({ name: "" })
+const form = useForm({ name: "" });
 
-const validate = useValidate(form, "/register")
+const validate = useValidate(form, "/register");
 </script>
 
 <template>
