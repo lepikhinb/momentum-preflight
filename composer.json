@@ -1,0 +1,50 @@
+{
+  "name": "based/momentum-preflight",
+  "description": "Validate Inertia.js form requests without running controllers' code",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Boris Lepikhin",
+      "email": "boris@lepikhin.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Momentum\\Preflight\\": "src/",
+      "Momentum\\Preflight\\Tests\\": "tests/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Momentum\\Preflight\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "illuminate/support": "^8.24|^9.0",
+    "inertiajs/inertia-laravel": "^0.6.3"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.9|^7.0",
+    "nunomaduro/larastan": "^1.0|^2.0",
+    "pestphp/pest": "^1.22",
+    "pestphp/pest-plugin-laravel": "^1.3",
+    "laravel/pint": "^1.0",
+    "spatie/laravel-data": "^2.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Momentum\\Preflight\\PreflightServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
