@@ -1,6 +1,6 @@
 {
   "name": "based/momentum-preflight",
-  "description": "Validate Inertia.js form requests without running controllers' code",
+  "description": "Realtime backend-driven validation for Inertia-powered Laravel apps",
   "type": "library",
   "license": "MIT",
   "authors": [
